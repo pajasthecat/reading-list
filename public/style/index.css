@@ -6,8 +6,9 @@ body {
 
   table{
     font-size: 12px;
-    width: 50%;
+    width: 40%;
     margin: auto;
+    border-collapse: collapse;
   }
 
   td {
@@ -32,13 +33,15 @@ body {
     font-size: 32px;
   }
 
-
+  .header {
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+  
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: auto;
-    width: 50%;
 }
 
 .footerContainer {
@@ -46,20 +49,28 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 2%;
+    margin-top: 2%;
   }
   
   .footerImageContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
   }
-  
-  .footerTextContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+
+  @media screen and (max-width: 800px) {
+    table,
+    footer,
+    .container {
+      width: 90%;
+      font-size: small;
+    }
+
+    .footerContainer{
+      margin-top: 15%;
+    }
   }
 
 
